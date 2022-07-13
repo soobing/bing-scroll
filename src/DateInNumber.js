@@ -1,5 +1,5 @@
 
-class DateInNumber {
+export default class DateInNumber {
   constructor(date) {
     this._date = isNaN(date.valueOf()) ? new Date() : date;
   }
