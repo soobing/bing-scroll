@@ -1,0 +1,24 @@
+{
+  "name": "bing-scroll",
+  "version": "0.0.1",
+  "description": "ios style datepicker library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soobing/bing-scroll.git"
+  },
+  "keywords": [
+    "datepicker",
+    "ios",
+    "scroll"
+  ],
+  "author": "soobing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soobing/bing-scroll/issues"
+  },
+  "homepage": "https://github.com/soobing/bing-scroll#readme"
+}
