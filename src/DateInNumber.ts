@@ -1,6 +1,11 @@
+interface DateInNumberInterface {
+  _date: Date;
+}
 
-export default class DateInNumber {
-  constructor(date) {
+export default class DateInNumber implements DateInNumberInterface {
+  _date: Date;
+
+  constructor(date: Date) {
     this._date = isNaN(date.valueOf()) ? new Date() : date;
   }
 
@@ -9,7 +14,7 @@ export default class DateInNumber {
   }
 
   set year(value) {
-    return this._date.setFullYear(value);
+    this._date.setFullYear(value);
   }
 
   get month() {
@@ -25,6 +30,6 @@ export default class DateInNumber {
   }
 
   set day(value) {
-    return this._date.setDate(value);
+    this._date.setDate(value);
   }
 }
