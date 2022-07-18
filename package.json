@@ -4,7 +4,10 @@
   "description": "ios style datepicker library",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && rollup --config",
+    "clean:build": "rm -rf build",
+    "clean:dist": "rm -rf dist",
+    "clean": "npm run clean:build && npm run clean:dist",
+    "build": "npm run clean && tsc && rollup --config",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
