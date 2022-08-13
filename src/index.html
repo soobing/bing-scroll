@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bing-scroll</title>
+  <style>
+    .example {
+      width: 250px;
+      border: 1px solid black;
+      margin: auto;
+    }
+
+    /* 변수화 필요 */
+    .bing-scroll {
+      overflow: hidden;
+      padding: 50px 0px 100px;
+      cursor: grab;
+    }
+
+    /* 변수화 필요 */
+    .picker__item {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 
+    필요한 경우 넣으면 됨
+    .picker__item__selected {
+      position: relative;
+      z-index: 1;
+      font-weight: bold;
+    } */
+
+    .picker__list {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      transition: transform 0.12s ease 0s;
+      list-style: none;
+      will-change: transform;
+    }
+
+    .picker {
+      position: relative;
+      width: 100%;
+      height: 50px;
+    }
+
+    .picker:before,
+    .picker:after {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      background-color: rgb(255, 255, 255);
+      opacity: 0.8;
+      pointer-events: none;
+      left: 0px;
+      content: '';
+    }
+
+    /* 변수화 필요 */
+    .picker:before {
+      top: -51px;
+      height: 50px;
+    }
+
+    /* 변수화 필요 */
+    .picker:after {
+      bottom: -101px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>bing-scroll</h1>
+  <div class="example">
+    <div class="bing-scroll">
+      <div class="picker">
+        <ul class="picker__list">
+          <li class="picker__item">1</li>
+          <li class="picker__item">2</li>
+          <li class="picker__item">3</li>
+          <li class="picker__item">4</li>
+          <li class="picker__item">5</li>
+          <li class="picker__item">6</li>
+          <li class="picker__item">7</li>
+          <li class="picker__item">8</li>
+          <li class="picker__item">9</li>
+          <li class="picker__item">10</li>
+          <li class="picker__item">11</li>
+          <li class="picker__item">12</li>
+          <li class="picker__item">13</li>
+          <li class="picker__item">14</li>
+          <li class="picker__item">15</li>
+          <li class="picker__item">16</li>
+          <li class="picker__item">17</li>
+          <li class="picker__item">18</li>
+          <li class="picker__item">19</li>
+          <li class="picker__item">20</li>
+          <li class="picker__item">21</li>
+          <li class="picker__item">22</li>
+          <li class="picker__item">23</li>
+          <li class="picker__item">24</li>
+          <li class="picker__item">25</li>
+          <li class="picker__item">26</li>
+          <li class="picker__item">27</li>
+          <li class="picker__item">28</li>
+          <li class="picker__item">29</li>
+          <li class="picker__item">30</li>
+          <li class="picker__item">31</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="module">
+    // import BingScroll from './bundle.js'
+
+    // const wrapperEl = document.getElementById('wrapper');
+    // new BingScroll(wrapperEl, {
+    //   onChangeCallback: (value) => {
+    //     console.log(value);
+    //   },
+    //   selectedIndex: 2,
+    // });
+  </script>
+</body>
+
+</html>
