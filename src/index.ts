@@ -1,3 +1,3 @@
-import DateInNumber from './DateInNumber';
+import BingScroll from "./BingScroll";
 
-console.log(new DateInNumber(new Date()))
+export default BingScroll;
