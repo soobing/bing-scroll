@@ -6,7 +6,8 @@ export default {
   input: "./build/src/index.js",
   output: {
     file: "./dist/bundle.js",
-    format: "es",
+    format: "umd",
+    name: "BingScroll",
     sourcemap: true,
   },
   plugins: [typescript({ tsconfig: "./tsconfig.json" }), commonjs(), resolve()],
