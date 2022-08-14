@@ -118,16 +118,14 @@
       </div>
     </div>
   </div>
-  <script type="module">
-    // import BingScroll from './bundle.js'
-
-    // const wrapperEl = document.getElementById('wrapper');
-    // new BingScroll(wrapperEl, {
-    //   onChangeCallback: (value) => {
-    //     console.log(value);
-    //   },
-    //   selectedIndex: 2,
-    // });
+  <script src="dist/bundle.js"></script>
+  <script>
+    new window.BingScroll(document.querySelector('.bing-scroll'), {
+      onChangeCallback: (value) => {
+        console.log(value);
+      },
+      selectedIndex: 2,
+    });
   </script>
 </body>
 
