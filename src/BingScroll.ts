@@ -26,7 +26,7 @@ class BingScroll {
     element: HTMLElement,
     options: Options = { height: 50, selectedIndex: 0 }
   ) {
-    const { height, selectedIndex, onChangeCallback } = options;
+    const { height = 50, selectedIndex = 0, onChangeCallback } = options;
     this.wrapperEl = element;
     this.pickerEl = element.querySelector(".picker"); // TODO: 옵션으로 받기
     this.listEl = element.querySelector(".picker__list"); // TODO: 옵션으로 받기
@@ -43,6 +43,7 @@ class BingScroll {
 
     this.OPTION_HEIGHT = height;
     this.selectedIndex = selectedIndex;
+
     this.onChangeCallback = onChangeCallback;
     this.OPTION_LENGTH = this.listEl.children.length;
     this.MAX_POSITION_Y = -this.OPTION_LENGTH * this.OPTION_HEIGHT;
@@ -53,8 +54,6 @@ class BingScroll {
     this.setPickerCSS();
     this.setListStyle();
     this.setListItemStyle();
-
-    console.log(this.wrapperEl, this.listEl, this.selectedIndex);
   }
 
   destroy() {
@@ -94,8 +93,6 @@ class BingScroll {
   };
 
   setListStyle = () => {
-    console.log(this.selectedIndex * this.OPTION_HEIGHT);
-
     this.listEl!.style.transform = `translateY(-${
       this.selectedIndex * this.OPTION_HEIGHT
     }px)`;
@@ -143,7 +140,6 @@ class BingScroll {
     const finalPosition = Math.max(maxPosition, Math.min(0, rounderPosition));
 
     this.positionY = finalPosition;
-    console.log("this.positionY:", this.positionY);
     this.selectedIndex = -this.positionY / this.OPTION_HEIGHT;
     this.onChangeCallback?.(this.selectedIndex);
 
